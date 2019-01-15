@@ -17,6 +17,8 @@
         </div>
     </fieldset>
 
-
+    <form id="payment_form" action="${requestaddress}" method="post">
+        <input type="submit" id="submit" name="submit" value="Submit" onclick="${string}"/>
+    </form>
 </body>
 </html>
