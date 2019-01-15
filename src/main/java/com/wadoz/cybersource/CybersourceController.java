@@ -9,7 +9,11 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.annotation.SessionScope;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +21,7 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
+@WebServlet
 @Controller
 @RequestMapping("/checkout")
 public class CybersourceController {
@@ -25,8 +29,10 @@ public class CybersourceController {
     private final CybersourceUtils utils;
     private static String pathResources = "src/main/resources/";
     private static final String PROPERTIES = pathResources + "cybs.properties";
-    private static Properties cybProperties;
+    private static Properties cybProperties = readProperty(PROPERTIES);
     private static int cartidnumber = 12345677;
+    private static HashMap<String, String> params = new HashMap<>();
+
 
     @Autowired
     public CybersourceController(CybersourceUtils utils) {
@@ -36,7 +42,7 @@ public class CybersourceController {
     Properties props = new Properties();
     HashMap<String, String> copy = new LinkedHashMap<>();
     HashMap signedData = new LinkedHashMap();
-
+   private static Enumeration<String> paramsEnum;
 
     @RequestMapping(value = "cybersource.do", method = RequestMethod.POST)
     public String signAndToken(ModelMap model, HttpServletRequest request) {
@@ -93,8 +99,8 @@ public class CybersourceController {
     @RequestMapping(value = "return.do", method = RequestMethod.POST)
     public String returnProcess(HttpServletRequest request, Model model) {
         // JSONObject obj = new JSONObject();
-        HashMap<String, String> params = new HashMap<>();
-        Enumeration<String> paramsEnum = request.getParameterNames();
+
+      paramsEnum = request.getParameterNames();
 
         while (paramsEnum.hasMoreElements()) {
             String paramName = paramsEnum.nextElement();
@@ -115,42 +121,31 @@ public class CybersourceController {
 
         return "receipt";
     }
-    @RequestMapping(value = "return.do", method = RequestMethod.GET)
+
+    @RequestMapping(value = "return.do" , method = RequestMethod.GET)
     public String checkCapture(HttpServletRequest request, Model model) {
-        // JSONObject obj = new JSONObject();
-        HashMap<String, String> params = new HashMap<>();
-        Enumeration<String> paramsEnum = request.getParameterNames();
-
-        while (paramsEnum.hasMoreElements()) {
-            String paramName = paramsEnum.nextElement();
-            String paramValue = request.getParameter(paramName);
-            params.put(paramName, paramValue);
-            //obj.put(paramName, paramValue);
-        }
 
         model.addAttribute("responseMap", params);
-        model.addAttribute(runCapture(cybProperties));
-
-        //Connect to DB
-//        DBObject dbObject = (DBObject) JSON.parse(String.valueOf(obj));
-//        Mongo mongo = new MongoClient("localhost", 27017);
-//        DB db = mongo.getDB("CyberPayment");
-//        DBCollection collection = db.getCollection("Token");
-//
-//        collection.insert((DBObject) dbObject);
 
         return "receipt";
     }
 
 
-    @RequestMapping(value = "order.do", method = RequestMethod.GET)
-    public String order(){
+    @RequestMapping(value = "order.do", method = RequestMethod.POST)
+    public String order() {
 
         return "order";
     }
+    @RequestMapping(value="/processForm",params="action1" ,method=RequestMethod.POST)
+    public void orderCapture(){
+        runCapture(cybProperties);
+    }
 
 
-    public String runCapture(Properties props) {
+
+
+    private String runCapture(Properties properties) {
+        System.out.println("Action1 block called");
 
         Properties captureProps = readProperty(pathResources + "capture.properties");
 
@@ -158,6 +153,8 @@ public class CybersourceController {
 
         HashMap<String, String> request = new HashMap<String, String>(
                 (Map) captureProps);
+
+
 
         try {
             displayMap("FOLLOW-ON CAPTURE REQUEST:", request);

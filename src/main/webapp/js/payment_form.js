@@ -65,6 +65,10 @@ function setDefaultsForPaymentDetailsSection() {
     $("input[name='bill_to_address_state']").val("CA");
     $("input[name='bill_to_address_country']").val("US");
     $("input[name='bill_to_address_postal_code']").val("94043");
+    $("input[name='card_type']").val("001");
+    $("input[name='card_number']").val("4111111111111111");
+    $("input[name='card_expiry_date']").val("12-2022");
+    $("input[name='card_cvn']").val("005");
 }
 
 function setDefaultsForUnsignedDetailsSection() {
