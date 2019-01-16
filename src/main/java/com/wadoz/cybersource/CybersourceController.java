@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -142,6 +143,12 @@ public class CybersourceController {
         return "order";
     }
 
+    @RequestMapping(value = "cancel_auth", params = "action2", method = RequestMethod.POST)
+    public String cancelAuth(){
+        runAuthReversal(cybProperties);
+        return "cancel_auth";
+    }
+
     //5-t step
     @RequestMapping(value = "processcapture", params = "action1", method = RequestMethod.POST)
     public String orderCapture() {
@@ -153,10 +160,7 @@ public class CybersourceController {
 
     private String runCapture(Properties properties) {
 
-        System.out.println("Action1 block called");
-
         Properties captureProps = readProperty(pathResources + "capture.properties");
-
         String authRequestID = captureProps.getProperty("ccCaptureService_authRequestID");
 
         HashMap<String, String> request = new HashMap<String, String>(
@@ -183,7 +187,7 @@ public class CybersourceController {
         return authRequestID;
     }
 
-    private  void runAuthReversal(Properties props) {
+    private void runAuthReversal(Properties props) {
         Properties authReversalProps
                 = readProperty(pathResources + "auth_reversal.properties");
 
@@ -207,6 +211,7 @@ public class CybersourceController {
         }
 
     }
+
     private void handleCriticalException(ClientException e, HashMap<String, String> request) {
 
     }
@@ -243,6 +248,41 @@ public class CybersourceController {
         }
 
         return props;
+    }
+
+    private static Properties writeProperty(String filename, String authRequestID, String merchantReferenceCode,
+                                            String purchaseTotals_currency, String item_0_unitPrice) {
+        Properties props = new Properties();
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(filename);
+            if (filename.equals(pathResources + "auth_reversal.properties")) {
+                props.setProperty("ccAuthReversalService_authRequestID", authRequestID);
+                props.setProperty("ccAuthReversalService_run", "true");
+            } else {
+                props.setProperty("ccCaptureService_run", "true");
+                props.setProperty("ccCaptureService_authRequestID", authRequestID);
+            }
+            props.setProperty("merchantReferenceCode", merchantReferenceCode);
+            props.setProperty("purchaseTotals_currency", purchaseTotals_currency);
+            props.setProperty("item_0_unitPrice", item_0_unitPrice);
+
+            props.store(fos, null);
+
+            fos.close();
+            return (props);
+        } catch (IOException io) {
+            io.printStackTrace();
+        } finally {
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return (props);
     }
 
 }
