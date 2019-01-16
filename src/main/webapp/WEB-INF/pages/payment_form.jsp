@@ -31,11 +31,8 @@
                 type="text" name="bill_to_address_city"><br/> <span>bill_to_address_state:</span><input
                 type="text" name="bill_to_address_state"><br/> <span>bill_to_address_country:</span><input
                 type="text" name="bill_to_address_country"><br/> <span>bill_to_address_postal_code:</span><input
-                type="text" name="bill_to_address_postal_code"><br/> <span>card_type:</span><input
-                type="text" name="card_type"><br/> <span>card_number:</span><input
-                type="text" name="card_number"><br/> <span>card_expiry_date:</span><input
-                type="text" name="card_expiry_date"><br/> <span>card_cvn:</span><input
-                type="password" name="card_cvn"><br/>
+                type="text" name="bill_to_address_postal_code"><br/>
+
         </div>
     </fieldset>
     <input type="submit" id="submit" name="submit" value="Submit"/>
