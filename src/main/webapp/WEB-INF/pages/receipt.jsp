@@ -17,8 +17,8 @@
         </div>
     </fieldset>
 
-    <form id="payment_form" action="processForm" method="post">
-    <input type="submit" id="submit" name="action1" value="Action1"/>
+    <form id="capture_form" action="processcapture" method="post">
+    <input type="submit" id="submit" name="action1" value="CAPTURE"/>
 
     </form>
 </body>

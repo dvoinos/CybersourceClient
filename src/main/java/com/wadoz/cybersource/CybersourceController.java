@@ -9,9 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.annotation.SessionScope;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +18,7 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
 @WebServlet
 @Controller
 @RequestMapping("/checkout")
@@ -28,22 +26,19 @@ public class CybersourceController {
 
     private final CybersourceUtils utils;
     private static String pathResources = "src/main/resources/";
-    private static final String PROPERTIES = pathResources + "cybs.properties";
-    private static Properties cybProperties = readProperty(PROPERTIES);
+    private static String PROPERTIES = pathResources + "cybs.properties";
+    Properties props = readProperty(pathResources + "capture" + ".properties");
     private static int cartidnumber = 12345677;
     private static HashMap<String, String> params = new HashMap<>();
 
+    private static final Properties cybProperties = readProperty(PROPERTIES);
 
     @Autowired
     public CybersourceController(CybersourceUtils utils) {
         this.utils = utils;
     }
 
-    Properties props = new Properties();
-    HashMap<String, String> copy = new LinkedHashMap<>();
-    HashMap signedData = new LinkedHashMap();
-   private static Enumeration<String> paramsEnum;
-
+    //second step
     @RequestMapping(value = "cybersource.do", method = RequestMethod.POST)
     public String signAndToken(ModelMap model, HttpServletRequest request) {
         HashMap signedData = new LinkedHashMap();
@@ -91,16 +86,18 @@ public class CybersourceController {
         return "payment_confirmation";
     }
 
+    //1-st step
     @RequestMapping(value = "cybersource.do", method = RequestMethod.GET)
     public String startProcess() {
         return "payment_form";
     }
 
+    //3-t step
     @RequestMapping(value = "return.do", method = RequestMethod.POST)
-    public String returnProcess(HttpServletRequest request, Model model) {
+    public void returnProcess(HttpServletRequest request, Model model) {
         // JSONObject obj = new JSONObject();
 
-      paramsEnum = request.getParameterNames();
+        Enumeration<String> paramsEnum = request.getParameterNames();
 
         while (paramsEnum.hasMoreElements()) {
             String paramName = paramsEnum.nextElement();
@@ -119,10 +116,10 @@ public class CybersourceController {
 //
 //        collection.insert((DBObject) dbObject);
 
-        return "receipt";
+        // return "receipt";
     }
 
-    @RequestMapping(value = "return.do" , method = RequestMethod.GET)
+    @RequestMapping(value = "return.do", method = RequestMethod.GET)
     public String checkCapture(HttpServletRequest request, Model model) {
 
         model.addAttribute("responseMap", params);
@@ -130,21 +127,32 @@ public class CybersourceController {
         return "receipt";
     }
 
-
+    //4-r step
     @RequestMapping(value = "order.do", method = RequestMethod.POST)
-    public String order() {
+    public String order(HttpServletRequest request, Model model) {
+        Enumeration<String> paramsEnum = request.getParameterNames();
+
+        while (paramsEnum.hasMoreElements()) {
+            String paramName = paramsEnum.nextElement();
+            String paramValue = request.getParameter(paramName);
+            params.put(paramName, paramValue);
+            //obj.put(paramName, paramValue);
+        }
 
         return "order";
     }
-    @RequestMapping(value="/processForm",params="action1" ,method=RequestMethod.POST)
-    public void orderCapture(){
+
+    //5-t step
+    @RequestMapping(value = "processcapture", params = "action1", method = RequestMethod.POST)
+    public String orderCapture() {
+
         runCapture(cybProperties);
+        return "processcapture";
     }
 
 
-
-
     private String runCapture(Properties properties) {
+
         System.out.println("Action1 block called");
 
         Properties captureProps = readProperty(pathResources + "capture.properties");
@@ -155,11 +163,10 @@ public class CybersourceController {
                 (Map) captureProps);
 
 
-
         try {
             displayMap("FOLLOW-ON CAPTURE REQUEST:", request);
             // run transaction now
-            Map reply = Client.runTransaction(request, props);
+            Map reply = Client.runTransaction(request, properties);
 
             displayMap("FOLLOW-ON CAPTURE REPLY:", reply);
 
@@ -176,6 +183,30 @@ public class CybersourceController {
         return authRequestID;
     }
 
+    private  void runAuthReversal(Properties props) {
+        Properties authReversalProps
+                = readProperty(pathResources + "auth_reversal.properties");
+
+        String merchantID = cybProperties.getProperty("merchantID");
+        HashMap<String, String> request = new HashMap<String, String>(
+                (Map) authReversalProps);
+
+        try {
+            displayMap("REVERSAL REQUEST:", request);
+            System.out.println("auth reversal");
+            // run transaction now
+            Map reply = Client.runTransaction(request, props);
+            displayMap("REVERSAL REPLY:", reply);
+        } catch (ClientException e) {
+            System.out.println(e.getMessage());
+            if (e.isCritical()) {
+                handleCriticalException(e, request);
+            }
+        } catch (FaultException e) {
+            e.printStackTrace();
+        }
+
+    }
     private void handleCriticalException(ClientException e, HashMap<String, String> request) {
 
     }
@@ -205,13 +236,13 @@ public class CybersourceController {
             FileInputStream fis = new FileInputStream(filename);
             props.load(fis);
             fis.close();
-            return (props);
+            return props;
         } catch (IOException ioe) {
             System.out.println("File not found");
             // do nothing. An empty Properties object will be returned.
         }
 
-        return (props);
+        return props;
     }
 
 }

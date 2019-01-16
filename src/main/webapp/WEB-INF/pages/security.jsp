@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="javax.xml.bind.DatatypeConverter" %>
 <%@ page import="javax.crypto.Mac" %>
 <%@ page import="javax.crypto.spec.SecretKeySpec" %>
+<%@ page import="javax.xml.bind.DatatypeConverter" %>
+<%@ page import="java.io.UnsupportedEncodingException" %>
 <%@ page import="java.security.InvalidKeyException" %>
 <%@ page import="java.security.NoSuchAlgorithmException" %>
-<%@ page import="java.io.UnsupportedEncodingException" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Iterator" %>
 
 
 <%! private static final String HMAC_SHA256 = "HmacSHA256";
