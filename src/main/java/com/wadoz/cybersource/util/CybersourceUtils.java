@@ -1,4 +1,4 @@
-package com.wadoz.cybersource;
+package com.wadoz.cybersource.util;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;

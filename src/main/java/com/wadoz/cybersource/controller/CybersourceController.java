@@ -1,39 +1,57 @@
-package com.wadoz.cybersource;
+package com.wadoz.cybersource.controller;
 
 import com.cybersource.ws.client.Client;
 import com.cybersource.ws.client.ClientException;
 import com.cybersource.ws.client.FaultException;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.wadoz.cybersource.util.CybersourceUtils;
+import org.bson.Document;
+import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@WebServlet
 @Controller
 @RequestMapping("/checkout")
 public class CybersourceController {
 
     private static String pathResources = "src/main/resources/";
-    private static String PROPERTIES = pathResources + "cybs.properties";
-    private static final Properties cybProperties = readProperty(PROPERTIES);
+
     private static int cartidnumber = 12345677;
     private static HashMap<String, String> params = new HashMap<>();
     private final CybersourceUtils utils;
-    private Properties props = readProperty(pathResources + "capture" + ".properties");
 
-    @Autowired
+    private static final Properties loadProp = new Properties();
+
+    private static final InputStream caprureProp = CybersourceController.class
+            .getClassLoader()
+            .getResourceAsStream("capture.properties");
+
+    private static final InputStream localProp = CybersourceController.class
+            .getClassLoader()
+            .getResourceAsStream("local.properties");
+
+    private static final InputStream authProp = CybersourceController.class
+            .getClassLoader()
+            .getResourceAsStream(" auth_reversal.properties");
+
+    private static final InputStream cybProp = CybersourceController.class
+            .getClassLoader()
+            .getResourceAsStream("cybs.properties");
+
     public CybersourceController(CybersourceUtils utils) {
         this.utils = utils;
     }
@@ -56,29 +74,13 @@ public class CybersourceController {
         System.out.println(dest.toString());
     }
 
-    private static Properties readProperty(String filename) {
-        Properties props = new Properties();
-
-        try {
-            FileInputStream fis = new FileInputStream(filename);
-            props.load(fis);
-            fis.close();
-            return props;
-        } catch (IOException ioe) {
-            System.out.println("File not found");
-            // do nothing. An empty Properties object will be returned.
-        }
-
-        return props;
-    }
-
     private static Properties writeProperty(String filename, String authRequestID, String merchantReferenceCode,
                                             String purchaseTotals_currency, String item_0_unitPrice) {
         Properties props = new Properties();
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(filename);
-            if (filename.equals(pathResources + "auth_reversal.properties")) {
+            if (filename.equals("auth_reversal.properties")) {
                 props.setProperty("ccAuthReversalService_authRequestID", authRequestID);
                 props.setProperty("ccAuthReversalService_run", "true");
             } else {
@@ -107,34 +109,42 @@ public class CybersourceController {
         return (props);
     }
 
-    //second step
+    private void handleCriticalException(ClientException e, HashMap<String, String> request) {
+
+    }
+
+    //1-st step It's start page for payment
+    @RequestMapping(value = "cybersource.do", method = RequestMethod.GET)
+    public String startProcess() {
+        return "payment_form";
+    }
+
+    //second step It's for generate signature and POST payment
     @RequestMapping(value = "cybersource.do", method = RequestMethod.POST)
     public String signAndToken(ModelMap model, HttpServletRequest request) {
+
         HashMap signedData = new LinkedHashMap();
+
         try {
-            props.load(CybersourceController.class.getClassLoader().getResourceAsStream("local.properties"));
+
+            loadProp.load(localProp);
+
             String merchantReferenceCode = String.valueOf(cartidnumber += 1);
-
-            String profileID = props.getProperty("cybersource.profileId");
-
-            String accessKey = props.getProperty("cybersource.accessKey");
-
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
             simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 
-            signedData.put("access_key", accessKey);
-            signedData.put("profile_id", profileID);
+            signedData.put("access_key", loadProp.getProperty("cybersource.accessKey"));
+            signedData.put("profile_id", loadProp.getProperty("cybersource.profileId"));
             signedData.put("transaction_uuid", UUID.randomUUID());
 
-            signedData.put("override_custom_receipt_page", props.getProperty("cybersource.returnurl"));
-            signedData.put("signed_field_names", props.getProperty("cybersource.signed_field_names"));
-            signedData.put("unsigned_field_names", props.getProperty("cybersource.unsigned_field_names"));
+            signedData.put("override_custom_receipt_page", loadProp.getProperty("cybersource.returnurl"));
+            signedData.put("signed_field_names", loadProp.getProperty("cybersource.signed_field_names"));
+            signedData.put("unsigned_field_names", loadProp.getProperty("cybersource.unsigned_field_names"));
 
             signedData.put("signed_date_time", simpleDateFormat.format(new Date()));
             signedData.put("reference_number", merchantReferenceCode);
             signedData.put("device_fingerprint_id", utils.getSessionId());
             signedData.put("locale", "en");
-
 
             request.setCharacterEncoding("UTF-8");
 
@@ -146,40 +156,18 @@ public class CybersourceController {
                     signedData.put(paramName, paramValue);
                 }
             }
-            model.addAttribute("requestaddress", props.getProperty("cybersource.requestaddress"));
-            model.addAttribute("content", utils.collectDataAndSign(props.getProperty("cybersource.returnurl"), props, signedData));
+            model.addAttribute("requestaddress", loadProp.getProperty("cybersource.requestaddress"));
+            model.addAttribute("content", utils.collectDataAndSign(loadProp.getProperty("cybersource.returnurl"), loadProp, signedData));
+
         } catch (IOException | NoSuchAlgorithmException | InvalidKeyException e) {
             e.printStackTrace();
+
         }
 
         return "payment_confirmation";
     }
 
-    //1-st step
-    @RequestMapping(value = "cybersource.do", method = RequestMethod.GET)
-    public String startProcess() {
-        return "payment_form";
-    }
-
-    //3-t step
-    @RequestMapping(value = "return.do", method = RequestMethod.POST)
-    public void returnProcess(HttpServletRequest request, Model model) {
-        // JSONObject obj = new JSONObject();
-
-
-        model.addAttribute("responseMap", params);
-
-        //Connect to DB
-//        DBObject dbObject = (DBObject) JSON.parse(String.valueOf(obj));
-//        Mongo mongo = new MongoClient("localhost", 27017);
-//        DB db = mongo.getDB("CyberPayment");
-//        DBCollection collection = db.getCollection("Token");
-//
-//        collection.insert((DBObject) dbObject);
-
-        // return "receipt";
-    }
-
+    //It's page purchase decision page and read via token information
     @RequestMapping(value = "return.do", method = RequestMethod.GET)
     public String checkCapture(HttpServletRequest request, Model model) {
 
@@ -188,11 +176,9 @@ public class CybersourceController {
         return "receipt";
     }
 
-    //4-r step
+    //4-r step It's page "order.jsp" and saving properties
     @RequestMapping(value = "order.do", method = RequestMethod.POST)
-    public String order(HttpServletRequest request, Model model) {
-
-        Properties properties;
+    public String order(HttpServletRequest request) {
 
         Enumeration<String> paramsEnum = request.getParameterNames();
 
@@ -200,48 +186,56 @@ public class CybersourceController {
             String paramName = paramsEnum.nextElement();
             String paramValue = request.getParameter(paramName);
             params.put(paramName, paramValue);
-            //obj.put(paramName, paramValue);
         }
-
-        properties = writeProperty(pathResources + "capture.properties", params.get("transaction_id"), params.get("req_reference_number"),
+        //write to .properties
+        writeProperty("capture.properties", params.get("transaction_id"), params.get("req_reference_number"),
                 params.get("req_currency"), params.get("req_amount"));
 
-        properties = writeProperty(pathResources + "auth_reversal.properties", params.get("transaction_id"), params.get("req_reference_number"),
+        writeProperty("auth_reversal.properties", params.get("transaction_id"), params.get("req_reference_number"),
                 params.get("req_currency"), params.get("req_amount"));
+
         return "order";
     }
 
+    //5-t-2 step //It's button "Cancel"
     @RequestMapping(value = "cancel_auth", params = "action2", method = RequestMethod.POST)
     public String cancelAuth() {
-        runAuthReversal(cybProperties);
+        runAuthReversal();
         return "cancel_auth";
     }
 
-    //5-t step
-    @RequestMapping(value = "processcapture", params = "action1", method = RequestMethod.POST)
+    //5-t-1 step It's button "Capture"
+    @RequestMapping(value = "process_capture", params = "action1", method = RequestMethod.POST)
     public String orderCapture() {
-
-        runCapture(cybProperties);
-        return "processcapture";
+        runCapture();
+        return "process_capture";
     }
 
-    private String runCapture(Properties properties) {
+    private void runCapture() {
 
-        Properties captureProps = readProperty(pathResources + "capture.properties");
-        String authRequestID = captureProps.getProperty("ccCaptureService_authRequestID");
-
+        try {
+            loadProp.load(caprureProp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // Properties captureProps = readProperty(pathResources + "capture.properties");
+        String authRequestID = loadProp.getProperty("ccCaptureService_authRequestID");
         HashMap<String, String> request = new HashMap<String, String>(
-                (Map) captureProps);
-
-
+                (Map) loadProp);
+        Properties properties = new Properties();
+        try {
+            properties.load(cybProp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         try {
             displayMap("FOLLOW-ON CAPTURE REQUEST:", request);
             // run transaction now
             Map reply = Client.runTransaction(request, properties);
 
             displayMap("FOLLOW-ON CAPTURE REPLY:", reply);
-
-            //   writeToMongoDb(captureProps);
+            //write to db
+            writeToMongoDb(reply, "CAPTURE");
 
         } catch (ClientException e) {
             System.out.println(e.getMessage());
@@ -251,23 +245,29 @@ public class CybersourceController {
         } catch (FaultException e) {
             e.printStackTrace();
         }
-        return authRequestID;
     }
 
-    private void runAuthReversal(Properties props) {
-        Properties authReversalProps
-                = readProperty(pathResources + "auth_reversal.properties");
+    private void runAuthReversal() {
 
-        String merchantID = cybProperties.getProperty("merchantID");
+        try {
+            loadProp.load(authProp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         HashMap<String, String> request = new HashMap<String, String>(
-                (Map) authReversalProps);
+                (Map) loadProp);
 
         try {
             displayMap("REVERSAL REQUEST:", request);
             System.out.println("auth reversal");
             // run transaction now
-            Map reply = Client.runTransaction(request, props);
+            Map reply = Client.runTransaction(request, loadProp);
             displayMap("REVERSAL REPLY:", reply);
+
+            //write to db
+            writeToMongoDb(reply, "CANCEL_AUTHORIZATION");
+
         } catch (ClientException e) {
             System.out.println(e.getMessage());
             if (e.isCritical()) {
@@ -279,8 +279,19 @@ public class CybersourceController {
 
     }
 
-    private void handleCriticalException(ClientException e, HashMap<String, String> request) {
+    private static void writeToMongoDb(Map reply, String processing) {
+
+        JSONObject obj = new JSONObject();
+        obj.putAll(reply);
+        Document doc = Document.parse(String.valueOf(obj));
+        doc.put("processing", processing);
+        //  Connect to DB
+        MongoCollection mongo = new MongoClient("localhost", 27017)
+                .getDatabase("CyberPayment")
+                .getCollection("Customer");
+        mongo.insertOne(doc);
 
     }
+
 
 }

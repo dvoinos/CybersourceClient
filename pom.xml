@@ -69,7 +69,10 @@
             <artifactId>xmlsec</artifactId>
             <version>1.4.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
         <dependency>
             <groupId>org.apache.axis</groupId>

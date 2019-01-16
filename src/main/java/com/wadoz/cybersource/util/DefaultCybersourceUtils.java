@@ -1,4 +1,4 @@
-package com.wadoz.cybersource;
+package com.wadoz.cybersource.util;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;

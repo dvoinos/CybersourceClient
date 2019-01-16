@@ -17,7 +17,7 @@
     </div>
 </fieldset>
 
-<form id="capture_form" action="processcapture" method="post">
+<form id="capture_form" action="process_capture" method="post">
     <input type="submit" id="capture" name="action1" value="CAPTURE"/>
 </form>
 <form id="auth_revarsal" action="cancel_auth" method="post">
