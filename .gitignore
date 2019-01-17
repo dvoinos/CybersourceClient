@@ -1,4 +1,6 @@
 .DS_Store
 .idea
-*.properties
+/resources/local.properties
+/resources/cybs.properties
 *.tar.gz
+/target/*
