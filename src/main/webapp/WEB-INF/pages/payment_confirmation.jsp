@@ -16,16 +16,22 @@
         tampering with these values as they pass through the consumers browser to the SASOP endpoint.<BR>
         <div>---------------------------------------------------------------------------------------</div>
         <div>
-            <c:forEach var="item" items="${content}">
+
+
+            <c:forEach var="item" items="${contextUser}">
                 <div>
                     <span class="fieldName">${item.key}:</span><span class="fieldValue">${item.value}</span>
                 </div>
             </c:forEach>
         </div>
     </fieldset>
-    <c:forEach var="item" items="${content}"><input type="hidden" id="${item.key}" name="${item.key}"
-                                                    value="${item.value}"/></c:forEach>
 
+    <c:forEach  var="item" items="${content}" >
+        <input type="hidden" name="${item.key}" value="${item.value}"/></c:forEach>
+
+    <legend>Your Card Information</legend>
+
+    <div>---------------------------------------------------------------------------------------</div>
     <span>card_type:</span><input type="text" name="card_type"><br/> <span>card_number:</span><input
         type="text" name="card_number"><br/> <span>card_expiry_date:</span><input
         type="text" name="card_expiry_date"><br/> <span>card_cvn:</span><input

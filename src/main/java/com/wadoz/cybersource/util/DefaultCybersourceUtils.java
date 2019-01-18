@@ -63,9 +63,9 @@ public class DefaultCybersourceUtils implements CybersourceUtils {
 
     private String buildDataToSign(Map<String, String> params) {
         String[] signedFieldNames = String.valueOf(params.get("signed_field_names")).split(",");
-        ArrayList<String> dataToSign = new ArrayList<String>();
+        ArrayList<String> dataToSign = new ArrayList<>();
         for (String signedFieldName : signedFieldNames) {
-            dataToSign.add(signedFieldName + "=" + String.valueOf(params.get(signedFieldName)));
+            dataToSign.add(signedFieldName + "=" + params.get(signedFieldName));
         }
         return commaSeparate(dataToSign);
     }

@@ -13,9 +13,9 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,15 +28,13 @@ import java.util.*;
 @RequestMapping("/checkout")
 public class CybersourceController {
 
-    private static String pathResources = "src/main/resources/";
-
-    private static int cartidnumber = 12345677;
+    private static int cartIdNamber = 12345677;
     private static HashMap<String, String> params = new HashMap<>();
     private final CybersourceUtils utils;
 
     private static final Properties loadProp = new Properties();
 
-    private static final InputStream caprureProp = CybersourceController.class
+    private static final InputStream captureProp = CybersourceController.class
             .getClassLoader()
             .getResourceAsStream("capture.properties");
 
@@ -109,6 +107,20 @@ public class CybersourceController {
         return (props);
     }
 
+    private static void writeToMongoDb(Map reply, String processing) {
+
+        JSONObject obj = new JSONObject();
+        obj.putAll(reply);
+        Document doc = Document.parse(String.valueOf(obj));
+        doc.put("processing", processing);
+        //  Connect to DB
+        MongoCollection mongo = new MongoClient("localhost", 27017)
+                .getDatabase("CyberPayment")
+                .getCollection("Customer");
+        mongo.insertOne(doc);
+
+    }
+
     private void handleCriticalException(ClientException e, HashMap<String, String> request) {
 
     }
@@ -121,30 +133,35 @@ public class CybersourceController {
 
     //second step It's for generate signature and POST payment
     @RequestMapping(value = "cybersource.do", method = RequestMethod.POST)
-    public String signAndToken(ModelMap model, HttpServletRequest request) {
+    public String generationSignAndToken(ModelMap model, HttpServletRequest request) {
 
-        HashMap signedData = new LinkedHashMap();
+        HashMap<String, String> signedData = new LinkedHashMap<>();
 
         try {
 
             loadProp.load(localProp);
 
-            String merchantReferenceCode = String.valueOf(cartidnumber += 1);
+            String merchantReferenceCode = String.valueOf(cartIdNamber += 1);
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
             simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 
             signedData.put("access_key", loadProp.getProperty("cybersource.accessKey"));
             signedData.put("profile_id", loadProp.getProperty("cybersource.profileId"));
-            signedData.put("transaction_uuid", UUID.randomUUID());
+            signedData.put("transaction_uuid", UUID.randomUUID().toString());
 
             signedData.put("override_custom_receipt_page", loadProp.getProperty("cybersource.returnurl"));
             signedData.put("signed_field_names", loadProp.getProperty("cybersource.signed_field_names"));
             signedData.put("unsigned_field_names", loadProp.getProperty("cybersource.unsigned_field_names"));
 
             signedData.put("signed_date_time", simpleDateFormat.format(new Date()));
-            signedData.put("reference_number", merchantReferenceCode);
             signedData.put("device_fingerprint_id", utils.getSessionId());
             signedData.put("locale", "en");
+            signedData.put("transaction_type", loadProp.getProperty("cybersource.transaction_type"));
+            signedData.put("reference_number", merchantReferenceCode);
+
+            HashMap<String, String> onlySignedData = new LinkedHashMap<>();
+
+            model.addAttribute("contextUser", onlySignedData);
 
             request.setCharacterEncoding("UTF-8");
 
@@ -154,6 +171,7 @@ public class CybersourceController {
                 String paramValue = request.getParameter(paramName);
                 if (!paramName.contains("submit")) {
                     signedData.put(paramName, paramValue);
+                    onlySignedData.put(paramName, paramValue);
                 }
             }
             model.addAttribute("requestaddress", loadProp.getProperty("cybersource.requestaddress"));
@@ -169,7 +187,7 @@ public class CybersourceController {
 
     //It's page purchase decision page and read via token information
     @RequestMapping(value = "return.do", method = RequestMethod.GET)
-    public String checkCapture(HttpServletRequest request, Model model) {
+    public String checkToken(Model model) {
 
         model.addAttribute("responseMap", params);
 
@@ -197,14 +215,15 @@ public class CybersourceController {
         return "order";
     }
 
-    //5-t-2 step //It's button "Cancel"
+    //It's button "Cancel"
+
     @RequestMapping(value = "cancel_auth", params = "action2", method = RequestMethod.POST)
     public String cancelAuth() {
         runAuthReversal();
         return "cancel_auth";
     }
 
-    //5-t-1 step It's button "Capture"
+    // It's button "Capture"
     @RequestMapping(value = "process_capture", params = "action1", method = RequestMethod.POST)
     public String orderCapture() {
         runCapture();
@@ -214,7 +233,7 @@ public class CybersourceController {
     private void runCapture() {
 
         try {
-            loadProp.load(caprureProp);
+            loadProp.load(captureProp);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -276,20 +295,6 @@ public class CybersourceController {
         } catch (FaultException e) {
             e.printStackTrace();
         }
-
-    }
-
-    private static void writeToMongoDb(Map reply, String processing) {
-
-        JSONObject obj = new JSONObject();
-        obj.putAll(reply);
-        Document doc = Document.parse(String.valueOf(obj));
-        doc.put("processing", processing);
-        //  Connect to DB
-        MongoCollection mongo = new MongoClient("localhost", 27017)
-                .getDatabase("CyberPayment")
-                .getCollection("Customer");
-        mongo.insertOne(doc);
 
     }
 

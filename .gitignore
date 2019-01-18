@@ -1,5 +1,21 @@
+### Eclipse ###
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.target
+.project
 .DS_Store
-.idea
+.idea/*
+out/
 /resources/local.properties
 /resources/cybs.properties
 *.tar.gz

@@ -8,18 +8,17 @@
     <script type="text/javascript" src="../../js/jquery-1.7.min.js"></script>
 </head>
 <body>
-<form id="payment_form" action="cybersource.do" method="post">
+<form id="payment_form" action="${requestaddress}" method="post">
 
     <fieldset>
         <legend>Signed Data Fields</legend>
         These fields will be POSTed to your server for signing using the
         Security file included in the <br> sample script. The name of
         each signed field should be included in the signed_field_names.<BR/>
+
+
         <div id="paymentDetailsSection" class="section">
-            <span>reference_number:</span><input type="text"
-                                                 name="reference_number" size="25"><br/>
-            <span>transaction_type:</span><input
-                type="text" name="transaction_type" size="25"><br/> <span>amount:</span><input
+            <span>amount:</span><input
                 type="text" name="amount" size="25"><br/> <span>currency:</span><input
                 type="text" name="currency" size="25"><br/> <span>payment_method:</span><input
                 type="text" name="payment_method"><br/> <span>bill_to_forename:</span><input
@@ -34,6 +33,7 @@
                 type="text" name="bill_to_address_postal_code"><br/>
 
         </div>
+
     </fieldset>
     <input type="submit" id="submit" name="submit" value="Submit"/>
     <script type="text/javascript" src="../../js/payment_form.js"></script>
