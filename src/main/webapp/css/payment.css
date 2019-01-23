@@ -24,3 +24,15 @@ span {
     font-weight: normal;
     vertical-align: top;
 }
+.demo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+.demo h2 {
+    text-align: center;
+    color: darkolivegreen;
+    width: 100%;
+}

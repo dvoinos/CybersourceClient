@@ -54,7 +54,6 @@ function setDefaultsForPaymentDetailsSection() {
     $("input[name='amount']").val("150.00");
     $("input[name='currency']").val("USD");
     $("input[name='locale']").val("ru");
-    $("input[name='payment_method']").val("card");
     $("input[name='signed_date_time']").val(Date.UTC(2022, 01, 01, 10, 40, 25, 00));
     $("input[name='bill_to_forename']").val("John");
     $("input[name='bill_to_surname']").val("Doe");

@@ -1017,3 +1017,788 @@ ccCaptureReply_reasonCode=100
 ccCaptureReply_amount=150.00
 
 2019-01-16 18:02:32.800 http-nio-8080-exec-6 INFO     > Client, End of runTransaction Call   1857ms
+
+2019-01-23 12:32:04.342 http-nio-8080-exec-10 TRANSTART> =======================================
+2019-01-23 12:32:04.343 http-nio-8080-exec-10 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 12:32:04.371 http-nio-8080-exec-10 REQUEST  > 
+UUID   >  2660929b-bd38-4c5b-aed8-ca4fd16dc854
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+cybersource.sign.algorithm=Hmxxxxxx56
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+clientLibrary=Java Basic
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+ccCaptureService_run=true
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_192
+
+2019-01-23 12:32:04.383 http-nio-8080-exec-10 INFO     > Client, End of soapWrap   42ms
+2019-01-23 12:32:04.533 http-nio-8080-exec-10 INFO     > Loading the certificate from p12 file 
+2019-01-23 12:32:04.638 http-nio-8080-exec-10 INFO     > Client, End of loading Merchant Certificates 255ms
+2019-01-23 12:32:04.638 http-nio-8080-exec-10 INFO     > Signing request...
+2019-01-23 12:32:04.798 http-nio-8080-exec-10 INFO     > Client, End of createSignedDoc   160ms
+2019-01-23 12:32:04.799 http-nio-8080-exec-10 INFO     > Using HttpURLConnection for connections.
+2019-01-23 12:32:05.935 http-nio-8080-exec-10 INFO     > Sending 4974 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 12:32:05.935 http-nio-8080-exec-10 INFO     > Reading response...
+2019-01-23 12:32:06.746 http-nio-8080-exec-10 INFO     > Parsing response...
+2019-01-23 12:32:06.752 http-nio-8080-exec-10 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482395264876025104007
+merchantReferenceCode=134567891
+ccCaptureReply_reconciliationID=70887299EQPR3Y8G
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxzzrv
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T10:32:06Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 12:32:06.753 http-nio-8080-exec-10 INFO     > Client, End of runTransaction Call   2412ms
+
+2019-01-23 14:08:20.100 http-nio-8080-exec-6 TRANSTART> =======================================
+2019-01-23 14:08:20.100 http-nio-8080-exec-6 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 14:08:20.128 http-nio-8080-exec-6 REQUEST  > 
+UUID   >  4d99c04f-4fa9-4a15-b9b6-9b356a4903e5
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+cybersource.sign.algorithm=Hmxxxxxx56
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+clientLibrary=Java Basic
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+ccCaptureService_run=true
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_192
+
+2019-01-23 14:08:20.139 http-nio-8080-exec-6 INFO     > Client, End of soapWrap   40ms
+2019-01-23 14:08:20.335 http-nio-8080-exec-6 INFO     > Loading the certificate from p12 file 
+2019-01-23 14:08:20.440 http-nio-8080-exec-6 INFO     > Client, End of loading Merchant Certificates 300ms
+2019-01-23 14:08:20.440 http-nio-8080-exec-6 INFO     > Signing request...
+2019-01-23 14:08:20.594 http-nio-8080-exec-6 INFO     > Client, End of createSignedDoc   154ms
+2019-01-23 14:08:20.595 http-nio-8080-exec-6 INFO     > Using HttpURLConnection for connections.
+2019-01-23 14:08:21.516 http-nio-8080-exec-6 INFO     > Sending 4974 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 14:08:21.516 http-nio-8080-exec-6 INFO     > Reading response...
+2019-01-23 14:08:22.218 http-nio-8080-exec-6 INFO     > Parsing response...
+2019-01-23 14:08:22.221 http-nio-8080-exec-6 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482453019536516604012
+merchantReferenceCode=134567891
+ccCaptureReply_reconciliationID=730910519R2KR5E5
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx3Tm6
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T12:08:22Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 14:08:22.221 http-nio-8080-exec-6 INFO     > Client, End of runTransaction Call   2122ms
+
+2019-01-23 18:37:16.330 http-nio-8080-exec-8 TRANSTART> =======================================
+2019-01-23 18:37:16.331 http-nio-8080-exec-8 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 18:37:16.364 http-nio-8080-exec-8 REQUEST  > 
+UUID   >  69da57cb-589d-45d9-a074-81c4c2d6d233
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+cybersource.sign.algorithm=Hmxxxxxx56
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+clientLibrary=Java Basic
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+ccCaptureService_run=true
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+
+2019-01-23 18:37:16.376 http-nio-8080-exec-8 INFO     > Client, End of soapWrap   46ms
+2019-01-23 18:37:16.534 http-nio-8080-exec-8 INFO     > Loading the certificate from p12 file 
+2019-01-23 18:37:16.667 http-nio-8080-exec-8 INFO     > Client, End of loading Merchant Certificates 291ms
+2019-01-23 18:37:16.667 http-nio-8080-exec-8 INFO     > Signing request...
+2019-01-23 18:37:16.819 http-nio-8080-exec-8 INFO     > Client, End of createSignedDoc   153ms
+2019-01-23 18:37:16.820 http-nio-8080-exec-8 INFO     > Using HttpURLConnection for connections.
+2019-01-23 18:37:17.799 http-nio-8080-exec-8 INFO     > Sending 4974 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 18:37:17.800 http-nio-8080-exec-8 INFO     > Reading response...
+2019-01-23 18:37:18.686 http-nio-8080-exec-8 INFO     > Parsing response...
+2019-01-23 18:37:18.690 http-nio-8080-exec-8 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482614382366532504012
+merchantReferenceCode=134567891
+ccCaptureReply_reconciliationID=71436798GR2KRL4Y
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx8ToT
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T16:37:18Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 18:37:18.690 http-nio-8080-exec-8 INFO     > Client, End of runTransaction Call   2361ms
+
+2019-01-23 21:20:58.480 http-nio-8080-exec-7 TRANSTART> =======================================
+2019-01-23 21:20:58.481 http-nio-8080-exec-7 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 21:20:58.516 http-nio-8080-exec-7 REQUEST  > 
+UUID   >  7ada7fa5-0366-406b-b722-ce2af07614a0
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482644425086573704002
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 21:20:58.531 http-nio-8080-exec-7 INFO     > Client, End of soapWrap   51ms
+2019-01-23 21:20:58.765 http-nio-8080-exec-7 INFO     > Loading the certificate from p12 file 
+2019-01-23 21:20:58.916 http-nio-8080-exec-7 INFO     > Client, End of loading Merchant Certificates 385ms
+2019-01-23 21:20:58.916 http-nio-8080-exec-7 INFO     > Signing request...
+2019-01-23 21:20:59.112 http-nio-8080-exec-7 INFO     > Client, End of createSignedDoc   197ms
+2019-01-23 21:20:59.113 http-nio-8080-exec-7 INFO     > Using HttpURLConnection for connections.
+2019-01-23 21:20:59.632 http-nio-8080-exec-7 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 21:20:59.632 http-nio-8080-exec-7 INFO     > Reading response...
+2019-01-23 21:21:00.304 http-nio-8080-exec-7 INFO     > Parsing response...
+2019-01-23 21:21:00.308 http-nio-8080-exec-7 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482712600886503404007
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73659216ZR2KZ139
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxDDpO
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:21:00Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 21:21:00.308 http-nio-8080-exec-7 INFO     > Client, End of runTransaction Call   1829ms
+
+2019-01-23 21:23:45.758 http-nio-8080-exec-7 TRANSTART> =======================================
+2019-01-23 21:23:45.758 http-nio-8080-exec-7 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 21:23:45.780 http-nio-8080-exec-7 REQUEST  > 
+UUID   >  35608fa4-576d-42e7-b804-cfbb5e3dbf78
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482644425086573704002
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 21:23:45.788 http-nio-8080-exec-7 INFO     > Client, End of soapWrap   31ms
+2019-01-23 21:23:45.944 http-nio-8080-exec-7 INFO     > Loading the certificate from p12 file 
+2019-01-23 21:23:46.040 http-nio-8080-exec-7 INFO     > Client, End of loading Merchant Certificates 252ms
+2019-01-23 21:23:46.040 http-nio-8080-exec-7 INFO     > Signing request...
+2019-01-23 21:23:46.167 http-nio-8080-exec-7 INFO     > Client, End of createSignedDoc   127ms
+2019-01-23 21:23:46.169 http-nio-8080-exec-7 INFO     > Using HttpURLConnection for connections.
+2019-01-23 21:23:46.441 http-nio-8080-exec-7 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 21:23:46.441 http-nio-8080-exec-7 INFO     > Reading response...
+2019-01-23 21:23:46.818 http-nio-8080-exec-7 INFO     > Parsing response...
+2019-01-23 21:23:46.824 http-nio-8080-exec-7 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482714265956588604007
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=71557598AR2KRGT7
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5znu
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:23:46Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 21:23:46.825 http-nio-8080-exec-7 INFO     > Client, End of runTransaction Call   1068ms
+
+2019-01-23 21:43:32.660 http-nio-8080-exec-7 TRANSTART> =======================================
+2019-01-23 21:43:32.661 http-nio-8080-exec-7 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 21:43:32.794 http-nio-8080-exec-7 REQUEST  > 
+UUID   >  8dc403d0-11c7-4a26-9437-092d53d25084
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482713988726704204002
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345679
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=11
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 21:43:32.821 http-nio-8080-exec-7 INFO     > Client, End of soapWrap   162ms
+2019-01-23 21:43:33.161 http-nio-8080-exec-7 INFO     > Loading the certificate from p12 file 
+2019-01-23 21:43:33.367 http-nio-8080-exec-7 INFO     > Client, End of loading Merchant Certificates 545ms
+2019-01-23 21:43:33.367 http-nio-8080-exec-7 INFO     > Signing request...
+2019-01-23 21:43:33.659 http-nio-8080-exec-7 INFO     > Client, End of createSignedDoc   293ms
+2019-01-23 21:43:33.661 http-nio-8080-exec-7 INFO     > Using HttpURLConnection for connections.
+2019-01-23 21:43:35.658 http-nio-8080-exec-7 INFO     > Sending 5450 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 21:43:35.658 http-nio-8080-exec-7 INFO     > Reading response...
+2019-01-23 21:43:36.514 http-nio-8080-exec-7 INFO     > Parsing response...
+2019-01-23 21:43:36.521 http-nio-8080-exec-7 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482726162976901404007
+merchantReferenceCode=12345679
+ccCaptureReply_reconciliationID=73665359ZR2KZ24O
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxBBp0
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:43:36Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=11.00
+
+2019-01-23 21:43:36.521 http-nio-8080-exec-7 INFO     > Client, End of runTransaction Call   3862ms
+
+2019-01-23 21:52:12.515 http-nio-8080-exec-5 TRANSTART> =======================================
+2019-01-23 21:52:12.515 http-nio-8080-exec-5 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 21:52:12.539 http-nio-8080-exec-5 REQUEST  > 
+UUID   >  698ce930-21dc-40cb-ae10-ec08b60dc19f
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482730426646194604006
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 21:52:12.547 http-nio-8080-exec-5 INFO     > Client, End of soapWrap   33ms
+2019-01-23 21:52:12.685 http-nio-8080-exec-5 INFO     > Loading the certificate from p12 file 
+2019-01-23 21:52:12.810 http-nio-8080-exec-5 INFO     > Client, End of loading Merchant Certificates 263ms
+2019-01-23 21:52:12.811 http-nio-8080-exec-5 INFO     > Signing request...
+2019-01-23 21:52:12.945 http-nio-8080-exec-5 INFO     > Client, End of createSignedDoc   135ms
+2019-01-23 21:52:12.946 http-nio-8080-exec-5 INFO     > Using HttpURLConnection for connections.
+2019-01-23 21:52:14.348 http-nio-8080-exec-5 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 21:52:14.349 http-nio-8080-exec-5 INFO     > Reading response...
+2019-01-23 21:52:15.048 http-nio-8080-exec-5 INFO     > Parsing response...
+2019-01-23 21:52:15.053 http-nio-8080-exec-5 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482731348416702004012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73666873ZR2KZ28O
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxjzHD
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:52:14Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 21:52:15.054 http-nio-8080-exec-5 INFO     > Client, End of runTransaction Call   2540ms
+
+2019-01-23 22:04:18.856 http-nio-8080-exec-5 TRANSTART> =======================================
+2019-01-23 22:04:18.856 http-nio-8080-exec-5 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 22:04:18.883 http-nio-8080-exec-5 REQUEST  > 
+UUID   >  97824aa7-4638-463b-bec2-f0b9ea60d837
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482736937656862804004
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 22:04:18.891 http-nio-8080-exec-5 INFO     > Client, End of soapWrap   35ms
+2019-01-23 22:04:19.068 http-nio-8080-exec-5 INFO     > Loading the certificate from p12 file 
+2019-01-23 22:04:19.188 http-nio-8080-exec-5 INFO     > Client, End of loading Merchant Certificates 297ms
+2019-01-23 22:04:19.189 http-nio-8080-exec-5 INFO     > Signing request...
+2019-01-23 22:04:19.488 http-nio-8080-exec-5 INFO     > Client, End of createSignedDoc   300ms
+2019-01-23 22:04:19.490 http-nio-8080-exec-5 INFO     > Using HttpURLConnection for connections.
+2019-01-23 22:04:20.477 http-nio-8080-exec-5 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 22:04:20.477 http-nio-8080-exec-5 INFO     > Reading response...
+2019-01-23 22:04:21.311 http-nio-8080-exec-5 INFO     > Parsing response...
+2019-01-23 22:04:21.318 http-nio-8080-exec-5 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482738611256936804012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73667243XR2KZ891
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx9g5T
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:04:21Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:04:21.319 http-nio-8080-exec-5 INFO     > Client, End of runTransaction Call   2463ms
+
+2019-01-23 22:05:08.498 http-nio-8080-exec-5 TRANSTART> =======================================
+2019-01-23 22:05:08.499 http-nio-8080-exec-5 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 22:05:08.523 http-nio-8080-exec-5 REQUEST  > 
+UUID   >  14e6cf0f-366d-43f7-8708-e839810b8be6
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482738072356864104004
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 22:05:08.530 http-nio-8080-exec-5 INFO     > Client, End of soapWrap   32ms
+2019-01-23 22:05:08.669 http-nio-8080-exec-5 INFO     > Loading the certificate from p12 file 
+2019-01-23 22:05:08.769 http-nio-8080-exec-5 INFO     > Client, End of loading Merchant Certificates 239ms
+2019-01-23 22:05:08.770 http-nio-8080-exec-5 INFO     > Signing request...
+2019-01-23 22:05:08.901 http-nio-8080-exec-5 INFO     > Client, End of createSignedDoc   131ms
+2019-01-23 22:05:08.902 http-nio-8080-exec-5 INFO     > Using HttpURLConnection for connections.
+2019-01-23 22:05:09.445 http-nio-8080-exec-5 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 22:05:09.446 http-nio-8080-exec-5 INFO     > Reading response...
+2019-01-23 22:05:10.060 http-nio-8080-exec-5 INFO     > Parsing response...
+2019-01-23 22:05:10.066 http-nio-8080-exec-5 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482739099006958604012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=736671767R6BGE0O
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5hgu
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:05:09Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:05:10.066 http-nio-8080-exec-5 INFO     > Client, End of runTransaction Call   1568ms
+
+2019-01-23 22:14:58.374 http-nio-8080-exec-5 TRANSTART> =======================================
+2019-01-23 22:14:58.376 http-nio-8080-exec-5 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 22:14:58.465 http-nio-8080-exec-5 REQUEST  > 
+UUID   >  f44c9e16-d012-4f71-96e2-fe57306de896
+Input request is
+======================================= 
+clientLibrary=Java Basic
+merchantID=wadoz_keramoizol
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+clientLibraryVersion=6.2.6
+
+2019-01-23 22:14:58.483 http-nio-8080-exec-5 INFO     > Client, End of soapWrap   109ms
+2019-01-23 22:15:07.566 http-nio-8080-exec-5 INFO     > Loading the certificate from p12 file 
+2019-01-23 22:15:12.249 http-nio-8080-exec-5 INFO     > Client, End of loading Merchant Certificates 13767ms
+2019-01-23 22:15:12.251 http-nio-8080-exec-5 INFO     > Signing request...
+2019-01-23 22:15:13.530 http-nio-8080-exec-5 INFO     > Client, End of createSignedDoc   1280ms
+2019-01-23 22:15:13.535 http-nio-8080-exec-5 INFO     > Using HttpURLConnection for connections.
+2019-01-23 22:15:16.040 http-nio-8080-exec-5 INFO     > Sending 3707 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 22:15:16.041 http-nio-8080-exec-5 INFO     > Reading response...
+2019-01-23 22:15:16.865 http-nio-8080-exec-5 INFO     > Parsing response...
+2019-01-23 22:15:16.881 http-nio-8080-exec-5 REPLY    > 
+decision=REJECT
+requestID=5482745166696518404007
+reasonCode=101
+requestToken=AhgBxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx6DrT
+missingField_0=(ics_applications)
+
+2019-01-23 22:15:16.882 http-nio-8080-exec-5 INFO     > Client, End of runTransaction Call   18508ms
+
+2019-01-23 22:18:10.780 http-nio-8080-exec-5 TRANSTART> =======================================
+2019-01-23 22:18:10.781 http-nio-8080-exec-5 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 22:18:10.808 http-nio-8080-exec-5 REQUEST  > 
+UUID   >  c38b3963-ff24-46a8-9369-45d26369754c
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482744539786810504002
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 22:18:10.817 http-nio-8080-exec-5 INFO     > Client, End of soapWrap   36ms
+2019-01-23 22:18:10.981 http-nio-8080-exec-5 INFO     > Loading the certificate from p12 file 
+2019-01-23 22:18:11.099 http-nio-8080-exec-5 INFO     > Client, End of loading Merchant Certificates 283ms
+2019-01-23 22:18:11.100 http-nio-8080-exec-5 INFO     > Signing request...
+2019-01-23 22:18:11.388 http-nio-8080-exec-5 INFO     > Client, End of createSignedDoc   288ms
+2019-01-23 22:18:11.392 http-nio-8080-exec-5 INFO     > Using HttpURLConnection for connections.
+2019-01-23 22:18:11.719 http-nio-8080-exec-5 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 22:18:11.720 http-nio-8080-exec-5 INFO     > Reading response...
+2019-01-23 22:18:12.530 http-nio-8080-exec-5 INFO     > Parsing response...
+2019-01-23 22:18:12.533 http-nio-8080-exec-5 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482746923226601004009
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73667314XR2KZ8BI
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxzzBL
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:18:12Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:18:12.533 http-nio-8080-exec-5 INFO     > Client, End of runTransaction Call   1753ms
+
+2019-01-23 22:22:19.657 http-nio-8080-exec-7 TRANSTART> =======================================
+2019-01-23 22:22:19.658 http-nio-8080-exec-7 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 22:22:19.683 http-nio-8080-exec-7 REQUEST  > 
+UUID   >  efd7002a-58b6-496d-a946-088db155223c
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482746299746152804001
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 22:22:19.691 http-nio-8080-exec-7 INFO     > Client, End of soapWrap   34ms
+2019-01-23 22:22:19.847 http-nio-8080-exec-7 INFO     > Loading the certificate from p12 file 
+2019-01-23 22:22:19.958 http-nio-8080-exec-7 INFO     > Client, End of loading Merchant Certificates 267ms
+2019-01-23 22:22:19.958 http-nio-8080-exec-7 INFO     > Signing request...
+2019-01-23 22:22:20.110 http-nio-8080-exec-7 INFO     > Client, End of createSignedDoc   151ms
+2019-01-23 22:22:20.111 http-nio-8080-exec-7 INFO     > Using HttpURLConnection for connections.
+2019-01-23 22:22:20.481 http-nio-8080-exec-7 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 22:22:20.482 http-nio-8080-exec-7 INFO     > Reading response...
+2019-01-23 22:22:21.225 http-nio-8080-exec-7 INFO     > Parsing response...
+2019-01-23 22:22:21.229 http-nio-8080-exec-7 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482749409466031004008
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73668258YR2KYN4X
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxjhkF
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:22:21Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:22:21.230 http-nio-8080-exec-7 INFO     > Client, End of runTransaction Call   1573ms
+
+2019-01-23 22:24:38.045 http-nio-8080-exec-8 TRANSTART> =======================================
+2019-01-23 22:24:38.045 http-nio-8080-exec-8 MERCHCFG > merchantID=wadoz_keramoizol, keysDirectory=/home/wadoz/keys/, keyAlias=wadoz_keramoizol, keyPassword=wadoz_keramoizol, sendToProduction=false, sendToAkamai=true, targetAPIVersion=1.151, keyFilename=(null), serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor, namespaceURI=(null), enableLog=true, logDirectory=logs, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2019-01-23 22:24:38.070 http-nio-8080-exec-8 REQUEST  > 
+UUID   >  26a1d356-c8e5-4ac8-b051-e407548c6a41
+Input request is
+======================================= 
+purchaseTotals_currency=USD
+useSignAndEncrypted=xxxxx
+cybersource.sign.algorithm=Hmxxxxxx56
+numberOfRetries=x
+enableJdkCert=xxxxx
+clientLibrary=Java Basic
+sendToAkamai=xxxx
+keyAlias=wadoxxxxxxxxizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=accexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxcode
+cybersource.requestaddress=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/pay
+clientLibraryVersion=6.2.6
+cybersource.sign.secretkey=ea92xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx14ab
+cybersource.profileId=51FBxxxxxxxxxxxxxxxxxxxxxxxxxxxx50EC
+timeout=xxxx
+ccCaptureService_authRequestID=5482749092596764404003
+cacertPassword=xxxxx
+cybersource.returnurl=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr.do
+cybersource.transaction_type=authxxxxxxxxxxxxxxxxxxxxxxxxxxoken
+certificateCacheEnabled=xxxx
+useHttpClient=xxxxx
+targetAPIVersion=xxxxx
+allowRetry=xxxx
+keyPassword=wadoxxxxxxxxizol
+ccCaptureService_run=true
+serverURL=httpxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxssor
+enableLog=xxxx
+clientEnvironment=Linux/4.15.0-43-generic/Azul Systems, Inc./1.8.0_201
+keysDirectory=/homxxxxxxxxxeys/
+logMaximumSize=xx
+cybersource.accessKey=3639xxxxxxxxxxxxxxxxxxxxxxxxd5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=xxxx
+enableCacert=xxxxx
+logDirectory=xxxx
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=x
+
+2019-01-23 22:24:38.078 http-nio-8080-exec-8 INFO     > Client, End of soapWrap   33ms
+2019-01-23 22:24:38.252 http-nio-8080-exec-8 INFO     > Loading the certificate from p12 file 
+2019-01-23 22:24:38.360 http-nio-8080-exec-8 INFO     > Client, End of loading Merchant Certificates 282ms
+2019-01-23 22:24:38.360 http-nio-8080-exec-8 INFO     > Signing request...
+2019-01-23 22:24:38.512 http-nio-8080-exec-8 INFO     > Client, End of createSignedDoc   152ms
+2019-01-23 22:24:38.514 http-nio-8080-exec-8 INFO     > Using HttpURLConnection for connections.
+2019-01-23 22:24:38.787 http-nio-8080-exec-8 INFO     > Sending 5454 bytes to https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+2019-01-23 22:24:38.787 http-nio-8080-exec-8 INFO     > Reading response...
+2019-01-23 22:24:39.143 http-nio-8080-exec-8 INFO     > Parsing response...
+2019-01-23 22:24:39.148 http-nio-8080-exec-8 REPLY    > 
+purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482750788876371804012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73667884ZR2KZ2GO
+requestToken=Ahj/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoSDR
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:24:39Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:24:39.148 http-nio-8080-exec-8 INFO     > Client, End of runTransaction Call   1103ms

@@ -1,0 +1,676 @@
+2019-01-23 18:35:48 DEBUG CybersourceController:97 - Properties recorded
+2019-01-23 18:35:48 DEBUG CybersourceController:97 - Properties recorded
+2019-01-23 18:37:16 DEBUG CybersourceController:61 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 18:37:16 DEBUG CybersourceController:75 - purchaseTotals_currency=USD
+cybersource.sign.algorithm=HmacSHA256
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=http://f1e18344.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+item_0_unitPrice=150.00
+ccCaptureService_run=true
+
+2019-01-23 18:37:18 DEBUG CybersourceController:61 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 18:37:18 DEBUG CybersourceController:75 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482614382366532504012
+merchantReferenceCode=134567891
+ccCaptureReply_reconciliationID=71436798GR2KRL4Y
+requestToken=Ahj//wSTKTaPHKBc1wnMESDdi0Ztm7lxHpMpdKY0sqNPun/YmAVGn3eo9KaQO6mIz+GTSTL0Yr17NAwJyZRxKuKXJKGV4wAA8ToT
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T16:37:18Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 18:37:18 DEBUG CybersourceController:115 - Connections to DataBase - MongoDB
+2019-01-23 18:37:18 DEBUG CybersourceController:126 - Successfully recorded
+2019-01-23 18:52:37 DEBUG CybersourceController:138 - MAIN page was loaded
+2019-01-23 18:52:41 DEBUG CybersourceController:186 - {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=b003022f-80ca-4c3a-a57a-3bb3f2b3a374, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T16:52:41Z, device_fingerprint_id=AC660373F947EA33F4117A3DD92A25B7, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=n5MhtR1gRMkkcxWM6vlZUMZXXhwhjAu9iV9dAErKRUo=}
+2019-01-23 19:08:42 DEBUG CybersourceController:139 - MAIN page was loaded
+2019-01-23 19:08:49 DEBUG CybersourceController:187 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=f86d4a86-1005-4c2a-9876-2f85b6721f21, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T17:08:49Z, device_fingerprint_id=AC660373F947EA33F4117A3DD92A25B7, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=+FpkyzhK1iFoYuBQ6pSVPz80ayUvdGVBO9BT7BXV9Q4=}
+2019-01-23 19:09:09 DEBUG CybersourceController:98 - capture.properties recorded
+2019-01-23 19:09:09 DEBUG CybersourceController:98 - auth_reversal.properties recorded
+2019-01-23 19:09:42 DEBUG CybersourceController:62 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 19:09:42 DEBUG CybersourceController:76 - purchaseTotals_currency=USD
+cybersource.sign.algorithm=HmacSHA256
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.payment_method=card
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=http://f1e18344.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+item_0_unitPrice=150.00
+ccCaptureService_run=true
+
+2019-01-23 19:09:42 ERROR CybersourceController:261 - merchantID is required.
+2019-01-23 19:09:42 DEBUG CybersourceController:237 - CAPTURE is being processed
+2019-01-23 19:13:32 DEBUG CybersourceController:139 - MAIN page was loaded
+2019-01-23 19:13:35 DEBUG CybersourceController:187 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=6c65fa11-c097-44e8-8b9c-b040dc425ce8, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T17:13:35Z, device_fingerprint_id=AC660373F947EA33F4117A3DD92A25B7, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=DWNTgQlvya7eM+01GUCEXof127/AL8uz8Rizb1P2lQo=}
+2019-01-23 19:13:53 DEBUG CybersourceController:98 - capture.properties recorded
+2019-01-23 19:13:53 DEBUG CybersourceController:98 - auth_reversal.properties recorded
+2019-01-23 19:17:00 DEBUG CybersourceController:140 - MAIN page was loaded
+2019-01-23 19:17:02 DEBUG CybersourceController:188 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=c846c419-eb43-4a6e-b5ea-c3f171e76074, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T17:17:02Z, device_fingerprint_id=AC660373F947EA33F4117A3DD92A25B7, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=UsZ++zaib6gx8DAJ4RyYIkfRPpCXI8BstLhD8TsF8BE=}
+2019-01-23 19:17:18 DEBUG CybersourceController:99 - capture.properties recorded
+2019-01-23 19:17:18 DEBUG CybersourceController:99 - auth_reversal.properties recorded
+2019-01-23 19:17:25 DEBUG CybersourceController:62 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 19:17:25 DEBUG CybersourceController:76 - purchaseTotals_currency=USD
+cybersource.sign.algorithm=HmacSHA256
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.payment_method=card
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=http://f1e18344.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+item_0_unitPrice=150.00
+ccCaptureService_run=true
+
+2019-01-23 19:17:25 ERROR CybersourceController:262 - merchantID is required.
+2019-01-23 19:17:25 DEBUG CybersourceController:238 - CAPTURE is being processed
+2019-01-23 19:19:41 DEBUG CybersourceController:140 - MAIN page was loaded
+2019-01-23 19:19:43 DEBUG CybersourceController:188 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=da20d7f2-2995-487e-943f-4d8876d51d1f, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T17:19:43Z, device_fingerprint_id=3EBC264E58A8C81E9E06F820E5C6AA17, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=XEW/WErkTtEuD0HYtkjQZlyZrlHoi7p+pBO3KuyEBgE=}
+2019-01-23 19:20:23 DEBUG CybersourceController:99 - capture.properties recorded
+2019-01-23 19:20:46 DEBUG CybersourceController:99 - auth_reversal.properties recorded
+2019-01-23 19:25:18 DEBUG CybersourceController:141 - MAIN page was loaded
+2019-01-23 19:25:21 DEBUG CybersourceController:189 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=02ff5933-7345-4012-ace0-a8d3d0f53f2f, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T17:25:21Z, device_fingerprint_id=28909C6D5AB3BF56F0DE73C49DB317A1, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=M9kjvzHInpILz/PCtF4RVKljHxMZKkI04g9QacZWq6Q=}
+2019-01-23 19:25:46 DEBUG CybersourceController:100 - src/main/resourcescapture.properties recorded
+2019-01-23 19:25:46 DEBUG CybersourceController:100 - src/main/resourcesauth_reversal.properties recorded
+2019-01-23 19:27:00 DEBUG CybersourceController:141 - MAIN page was loaded
+2019-01-23 19:27:03 DEBUG CybersourceController:189 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=55d3a9b7-06d6-4b9f-a201-b5c0746ce96f, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T17:27:03Z, device_fingerprint_id=28909C6D5AB3BF56F0DE73C49DB317A1, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=fxqrfu+y4AKSNIp2bLW7mriCrvBna+yKIBOtshoA0WY=}
+2019-01-23 19:27:23 DEBUG CybersourceController:100 - src/main/resources/capture.properties recorded
+2019-01-23 19:27:23 DEBUG CybersourceController:100 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 19:27:45 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 19:27:45 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+cybersource.sign.algorithm=HmacSHA256
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=134567891
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.payment_method=card
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+ccCaptureService_authRequestID=5476545404246207704006
+cybersource.returnurl=http://f1e18344.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+item_0_unitPrice=150.00
+ccCaptureService_run=true
+
+2019-01-23 19:27:45 ERROR CybersourceController:263 - merchantID is required.
+2019-01-23 19:27:45 DEBUG CybersourceController:239 - CAPTURE is being processed
+2019-01-23 21:16:50 DEBUG CybersourceController:142 - MAIN page was loaded
+2019-01-23 21:19:14 DEBUG CybersourceController:142 - MAIN page was loaded
+2019-01-23 21:19:18 DEBUG CybersourceController:190 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=30956607-52a2-49d3-8396-fe65de0825e7, payment_method=card, override_custom_receipt_page=http://f1e18344.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:19:18Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=SXLaqCwOFY6Of6gUzStr+jBEetoq8rTDRFr2Sy2eGs0=}
+2019-01-23 21:20:37 DEBUG CybersourceController:142 - MAIN page was loaded
+2019-01-23 21:20:58 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 21:20:58 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482644425086573704002
+cacertPassword=false
+cybersource.returnurl=http://f1e18344.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 21:21:00 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 21:21:00 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482712600886503404007
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73659216ZR2KZ139
+requestToken=Ahj//wSTKTfsDdmWEfHnESDdm2auWTFtapMpdpizcqNPu9aVaAVGn3ewwp6QO6mIz+GTSTL0Yr17NAwJyZSbfOwpGn25oQAADDpO
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:21:00Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 21:21:00 DEBUG CybersourceController:119 - Connections to DataBase - MongoDB
+2019-01-23 21:21:00 DEBUG CybersourceController:130 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 21:21:00 DEBUG CybersourceController:240 - CAPTURE is being processed
+2019-01-23 21:22:21 DEBUG CybersourceController:142 - MAIN page was loaded
+2019-01-23 21:22:30 DEBUG CybersourceController:190 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=122ae591-34c0-42d5-a219-de5c8a5ffbe4, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:22:30Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=11, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=/G4S5QPIEoZYQWqQvnxfEQilg4Kwem/DrjshvxK3jJU=}
+2019-01-23 21:22:55 DEBUG CybersourceController:142 - MAIN page was loaded
+2019-01-23 21:23:00 DEBUG CybersourceController:190 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=f5a2652a-512d-41de-8611-24f178e37e68, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:23:00Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345679, amount=11, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=bFLQQeK58EGbWE1baQmvsaORYI5HivunpC3NOwU9y/Q=}
+2019-01-23 21:23:19 DEBUG CybersourceController:101 - src/main/resources/capture.properties recorded
+2019-01-23 21:23:19 DEBUG CybersourceController:101 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 21:23:45 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 21:23:45 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482644425086573704002
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 21:23:46 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 21:23:46 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482714265956588604007
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=71557598AR2KRGT7
+requestToken=Ahj//wSTKTfx+DjtBkpnESDdi1at2rlxBpMpdKPUbqNPu9aVaAVGn3ew2zaQO6mIz+GTSTL0Yr17NAwJyZSbfOwpGn25oQAA5znu
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:23:46Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 21:23:46 DEBUG CybersourceController:119 - Connections to DataBase - MongoDB
+2019-01-23 21:23:46 DEBUG CybersourceController:130 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 21:23:46 DEBUG CybersourceController:240 - CAPTURE is being processed
+2019-01-23 21:42:51 DEBUG CybersourceController:142 - MAIN page was loaded
+2019-01-23 21:42:55 DEBUG CybersourceController:190 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=a94c78c7-456d-4b47-b97d-56a73f4ec744, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:42:55Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=Xw7HUIGYJjTOC69qv0miJnk+JoGWtVyNmT7V4/wncnQ=}
+2019-01-23 21:43:17 DEBUG CybersourceController:101 - src/main/resources/capture.properties recorded
+2019-01-23 21:43:17 DEBUG CybersourceController:101 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 21:43:32 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 21:43:32 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482713988726704204002
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345679
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=11
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 21:43:36 DEBUG CybersourceController:63 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 21:43:36 DEBUG CybersourceController:77 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482726162976901404007
+merchantReferenceCode=12345679
+ccCaptureReply_reconciliationID=73665359ZR2KZ24O
+requestToken=Ahj//wSTKTgcPH/Sp5VnESDdm2bNWbVzapMpdpk0nqNPu9hrGAVGn3exXH6QLiZGfwyaSZejFevZoGBOTKTfw/BVQPmjiAAABBp0
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:43:36Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=11.00
+
+2019-01-23 21:43:36 DEBUG CybersourceController:119 - Connections to DataBase - MongoDB
+2019-01-23 21:43:36 DEBUG CybersourceController:130 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 21:43:36 DEBUG CybersourceController:240 - CAPTURE is being processed
+2019-01-23 21:50:18 DEBUG CybersourceController:143 - MAIN page was loaded
+2019-01-23 21:50:22 DEBUG CybersourceController:191 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=6fa596b5-c1c8-4ba7-bb07-7be83bbb5f3b, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:50:22Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=r2Qe3a6ehZkHPVoH78Q1Ni1nYvgzSJzfxhrKHMJ2maU=}
+2019-01-23 21:50:43 DEBUG CybersourceController:102 - src/main/resources/capture.properties recorded
+2019-01-23 21:50:43 DEBUG CybersourceController:102 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 21:51:42 DEBUG CybersourceController:143 - MAIN page was loaded
+2019-01-23 21:51:46 DEBUG CybersourceController:191 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=30b69988-5e7b-4fbc-89d3-a59badc29a0e, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:51:46Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=fT+i47CWiAk0nOZABg9EAWARP0G433cvuFXEREd45lM=}
+2019-01-23 21:52:04 DEBUG CybersourceController:102 - src/main/resources/capture.properties recorded
+2019-01-23 21:52:04 DEBUG CybersourceController:102 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 21:52:12 DEBUG CybersourceController:64 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 21:52:12 DEBUG CybersourceController:78 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482730426646194604006
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 21:52:15 DEBUG CybersourceController:64 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 21:52:15 DEBUG CybersourceController:78 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482731348416702004012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73666873ZR2KZ28O
+requestToken=Ahj//wSTKTguqKEb+TssESDdm2bNnDdnapMpdpk4nqNPu9jJQAVGn3exoeaQO6mIz+GTSTL0Yr17NAwJyZScFbEkWChj8wAAjzHD
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T19:52:14Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 21:52:15 DEBUG CybersourceController:120 - Connections to DataBase - MongoDB
+2019-01-23 21:52:15 DEBUG CybersourceController:131 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 21:52:15 DEBUG CybersourceController:241 - CAPTURE is being processed
+2019-01-23 21:52:45 DEBUG CybersourceController:143 - MAIN page was loaded
+2019-01-23 21:52:50 DEBUG CybersourceController:191 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=d3fadadc-04df-4929-8712-8e3873feba18, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:52:50Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=NrMbcBY30bAdfJ1H2iCgwLYAwD6v5CMBIj/GjN+RN8w=}
+2019-01-23 21:53:08 DEBUG CybersourceController:102 - src/main/resources/capture.properties recorded
+2019-01-23 21:53:08 DEBUG CybersourceController:102 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 21:59:31 DEBUG CybersourceController:141 - MAIN page was loaded
+2019-01-23 21:59:35 DEBUG CybersourceController:189 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=de6bd48c-130c-4373-8e29-dffee23269ca, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T19:59:35Z, device_fingerprint_id=43A2CDD6E764347CE95F2705742A0F11, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=lHIGN1uKauIHZhZXqym1SGSO/CvoreYfftqgbVnPD5E=}
+2019-01-23 21:59:56 DEBUG CybersourceController:100 - src/main/resources/capture.properties recorded
+2019-01-23 21:59:56 DEBUG CybersourceController:100 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:01:10 DEBUG CybersourceController:141 - MAIN page was loaded
+2019-01-23 22:01:13 DEBUG CybersourceController:189 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=49867312-7bc1-4724-9e22-561340b457d8, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:01:13Z, device_fingerprint_id=5796E74AB2BF50E42FBB64D08E4B7B74, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=F5AbEpv0fIAvrbCHxbyDAvzQKV2ZhXknmKcrbU+Oe0s=}
+2019-01-23 22:01:43 DEBUG CybersourceController:100 - src/main/resources/capture.properties recorded
+2019-01-23 22:01:44 DEBUG CybersourceController:100 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:03:04 DEBUG CybersourceController:141 - MAIN page was loaded
+2019-01-23 22:03:08 DEBUG CybersourceController:189 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=4116acc1-7ac8-44e9-92ce-9d4f5397c375, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:03:08Z, device_fingerprint_id=5796E74AB2BF50E42FBB64D08E4B7B74, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=ltGAGAzkrLjQEkzryNB5WoVUO4HTNFzhM1Cg8BwHU5U=}
+2019-01-23 22:03:28 DEBUG CybersourceController:100 - src/main/resources/capture.properties recorded
+2019-01-23 22:03:28 DEBUG CybersourceController:100 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:04:18 DEBUG CybersourceController:62 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 22:04:18 DEBUG CybersourceController:76 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482736937656862804004
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 22:04:21 DEBUG CybersourceController:62 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 22:04:21 DEBUG CybersourceController:76 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482738611256936804012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73667243XR2KZ891
+requestToken=Ahj//wSTKThIdiTgOq6sESDdm2bN2TRnYpMpdpw5YqNPu9j8RAVGn3eyHJ6QO6mIz+GTSTL0Yr17NAwJyZScIUIBvylEEgAA9g5T
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:04:21Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:04:21 DEBUG CybersourceController:118 - Connections to DataBase - MongoDB
+2019-01-23 22:04:21 ERROR CybersourceController:132 - Interrupted acquiring a permit to retrieve an item from the pool 
+2019-01-23 22:04:21 DEBUG CybersourceController:239 - CAPTURE is being processed
+2019-01-23 22:04:37 DEBUG CybersourceController:141 - MAIN page was loaded
+2019-01-23 22:04:41 DEBUG CybersourceController:189 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=095e2575-f594-449a-8ca0-7d210dfa66e4, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:04:41Z, device_fingerprint_id=58E192F1A08527F66A0BF78A12F52F36, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=N49TJaUhxHjA1FbV3NwsV2iUU66NI59hvJc2ugF6hUs=}
+2019-01-23 22:05:00 DEBUG CybersourceController:100 - src/main/resources/capture.properties recorded
+2019-01-23 22:05:00 DEBUG CybersourceController:100 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:05:08 DEBUG CybersourceController:62 - REVERSAL REQUEST:
+2019-01-23 22:05:08 DEBUG CybersourceController:76 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482738072356864104004
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 22:05:08 DEBUG CybersourceController:274 - auth reversal
+2019-01-23 22:05:10 DEBUG CybersourceController:62 - REVERSAL REPLY:
+2019-01-23 22:05:10 DEBUG CybersourceController:76 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482739099006958604012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=736671767R6BGE0O
+requestToken=Ahj//wSTKThKMcAHBI7sESDdm2bN2Lds3pNoUeKwnqNPu9kIyAVGn3eyKK6QO6mIz+GTSTL0Yr17NAwJyZScI0YCNmnLIgAA5hgu
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:05:09Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:05:10 DEBUG CybersourceController:118 - Connections to DataBase - MongoDB
+2019-01-23 22:05:10 DEBUG CybersourceController:129 - CANCEL_AUTHORIZATION ->Successfully recorded in DataBase
+2019-01-23 22:05:10 DEBUG CybersourceController:231 - CANCEL AUTHORIZATION is being processed
+2019-01-23 22:09:05 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:09:08 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=5533a898-a641-4eca-aa27-11000feb5e25, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:09:08Z, device_fingerprint_id=58E192F1A08527F66A0BF78A12F52F36, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=zsMu1oDxvKKB+eqeoLVbaE02V5fmSExDFxt3Nidev2w=}
+2019-01-23 22:09:27 DEBUG CybersourceController:103 - src/main/resources/capture.properties recorded
+2019-01-23 22:09:27 DEBUG CybersourceController:103 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:09:37 DEBUG CybersourceController:65 - REVERSAL REQUEST:
+2019-01-23 22:09:37 DEBUG CybersourceController:79 - 
+2019-01-23 22:09:37 DEBUG CybersourceController:271 - auth reversal
+2019-01-23 22:10:24 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:10:28 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=1ed097e8-2934-4cb4-939e-43b4adb2c541, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:10:28Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=993xutHXL5BZQLXVkXwM2fqieNez1xU7fcfUobgVgHg=}
+2019-01-23 22:10:47 DEBUG CybersourceController:103 - src/main/resources/capture.properties recorded
+2019-01-23 22:10:47 DEBUG CybersourceController:103 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:11:24 DEBUG CybersourceController:65 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 22:11:24 DEBUG CybersourceController:79 - 
+2019-01-23 22:12:09 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:12:13 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=ace3fefb-4501-4a1f-b31d-f5a4782ede28, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:12:13Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=wnt4tntuUPMs9xyXGCCwOQztDGCVH2fb7pIbCorqj0M=}
+2019-01-23 22:12:32 DEBUG CybersourceController:103 - src/main/resources/capture.properties recorded
+2019-01-23 22:12:32 DEBUG CybersourceController:103 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:13:09 DEBUG CybersourceController:65 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 22:13:09 DEBUG CybersourceController:79 - 
+2019-01-23 22:13:45 DEBUG CybersourceController:145 - MAIN page was loaded
+2019-01-23 22:13:51 DEBUG CybersourceController:193 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=98ac4852-ca11-40f7-ae97-573003e656cc, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:13:51Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=cKWSMxJowEzPpkt/xPzC+4irPdZMUel4Qmp2GM5JVKM=}
+2019-01-23 22:14:14 DEBUG CybersourceController:104 - src/main/resources/capture.properties recorded
+2019-01-23 22:14:14 DEBUG CybersourceController:104 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:14:38 DEBUG CybersourceController:66 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 22:14:50 DEBUG CybersourceController:80 - 
+2019-01-23 22:15:33 DEBUG CybersourceController:66 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 22:15:37 DEBUG CybersourceController:80 - decision=REJECT
+requestID=5482745166696518404007
+reasonCode=101
+requestToken=AhgBLwSTKThfwEgX1kenjP0ZdJMvRivXs0AA6DrT
+missingField_0=(ics_applications)
+
+2019-01-23 22:15:46 DEBUG CybersourceController:122 - Connections to DataBase - MongoDB
+2019-01-23 22:15:46 DEBUG CybersourceController:133 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 22:15:50 DEBUG CybersourceController:243 - CAPTURE is being processed
+2019-01-23 22:16:48 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:16:52 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=499ff59d-3faf-4d5f-86f7-f934eeea15e3, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:16:52Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=UT9dNCPG0vlq3QcuCLWCGTMb7K6BGHtOglONPdAICOY=}
+2019-01-23 22:17:10 DEBUG CybersourceController:103 - src/main/resources/capture.properties recorded
+2019-01-23 22:17:10 DEBUG CybersourceController:103 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:17:38 DEBUG CybersourceController:65 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 22:17:38 DEBUG CybersourceController:79 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482744539786810504002
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 22:18:12 DEBUG CybersourceController:65 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 22:18:12 DEBUG CybersourceController:79 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482746923226601004009
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73667314XR2KZ8BI
+requestToken=Ahj//wSTKThl/dYfcpvpESDdm2bN2bFpYpMpdpxCkqNPu9lGkAVGn3eyrdaQO6mIz+GTSTL0Yr17NAwJyZScLsMOJrIZoQAAzzBL
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:18:12Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:18:12 DEBUG CybersourceController:121 - Connections to DataBase - MongoDB
+2019-01-23 22:18:12 DEBUG CybersourceController:132 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 22:18:12 DEBUG CybersourceController:242 - CAPTURE is being processed
+2019-01-23 22:21:24 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:21:28 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=2b4747e2-dc6b-4a13-8f9e-1622f285132d, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:21:28Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=150.00, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=NAskU2E7evzBDJbO1HHYLw9QAu/sdJ56sl7pFpKf06o=}
+2019-01-23 22:21:50 DEBUG CybersourceController:103 - src/main/resources/capture.properties recorded
+2019-01-23 22:21:50 DEBUG CybersourceController:103 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:22:19 DEBUG CybersourceController:65 - FOLLOW-ON CAPTURE REQUEST:
+2019-01-23 22:22:19 DEBUG CybersourceController:79 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482746299746152804001
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 22:22:21 DEBUG CybersourceController:65 - FOLLOW-ON CAPTURE REPLY:
+2019-01-23 22:22:21 DEBUG CybersourceController:79 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482749409466031004008
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73668258YR2KYN4X
+requestToken=Ahj//wSTKThu0w7Zf9loESDdm2bOGTVxZpMpdmc0sKNPu9lTkAVGn3eyzB6QO6mIz+GTSTL0Yr17NAwJyZScMeNkYmd3UIAAjhkF
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:22:21Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:22:21 DEBUG CybersourceController:121 - Connections to DataBase - MongoDB
+2019-01-23 22:22:21 DEBUG CybersourceController:132 - CAPTURE ->Successfully recorded in DataBase
+2019-01-23 22:22:21 DEBUG CybersourceController:242 - CAPTURE is being processed
+2019-01-23 22:22:41 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:22:48 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=d31faaf4-8e39-4994-b7a0-2897e5384be4, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:22:48Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345678, amount=1111, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=jqclOf7ekCwwqlkBjoxs8SNGnvrMAGiFTy7TEBx5I/Y=}
+2019-01-23 22:23:29 DEBUG CybersourceController:144 - MAIN page was loaded
+2019-01-23 22:23:36 DEBUG CybersourceController:192 - Data was successful sent: ->  {access_key=363967f151773da2928dc098cc94d5cc, profile_id=51FBA08F-3AFC-464C-AE15-7B90240950EC, transaction_uuid=d3172245-e6a4-40ca-8010-a50a24f6f782, payment_method=card, override_custom_receipt_page=http://3b494f39.ngrok.io/checkout/order.do, signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code, unsigned_field_names=, signed_date_time=2019-01-23T20:23:36Z, device_fingerprint_id=E5F67F3BAE905F40DF2C00FCF4927615, locale=en, transaction_type=authorization,create_payment_token, reference_number=12345679, amount=111, currency=USD, bill_to_forename=John, bill_to_surname=Doe, bill_to_email=null@cybersource.com, bill_to_phone=02890888888, bill_to_address_line1=1 Card Lane, bill_to_address_city=My City, bill_to_address_state=CA, bill_to_address_country=US, bill_to_address_postal_code=94043, signature=fIh7lTSLNl09ZbHmRKYa6rHFwf5Cdp/c+8k+V5ShpwA=}
+2019-01-23 22:23:55 DEBUG CybersourceController:103 - src/main/resources/capture.properties recorded
+2019-01-23 22:23:55 DEBUG CybersourceController:103 - src/main/resources/auth_reversal.properties recorded
+2019-01-23 22:24:38 DEBUG CybersourceController:65 - REVERSAL REQUEST:
+2019-01-23 22:24:38 DEBUG CybersourceController:79 - purchaseTotals_currency=USD
+useSignAndEncrypted=false
+cybersource.sign.algorithm=HmacSHA256
+numberOfRetries=5
+enableJdkCert=false
+sendToAkamai=true
+keyAlias=wadoz_keramoizol
+cybersource.unsigned_field_names=
+cybersource.signed_field_names=access_key,profile_id,transaction_uuid,override_custom_receipt_page,signed_field_names,unsigned_field_names,signed_date_time,reference_number,device_fingerprint_id,locale,transaction_type,amount,currency,payment_method,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code
+cybersource.requestaddress=https://testsecureacceptance.cybersource.com/pay
+cybersource.sign.secretkey=ea92311bb43f4b7c81f51f1bedd0eab785ab97ffeee940b09dadba2187a8c27360e8e603d9244265a62c1be629d873265a3d6f793ab24a5db03fd7f42e098d212a946bb4215845349cd33a80a09398effe144ec81b1c4c878523305607fa25c76d6820cc716e4bb1a5d391ce91f9410e0e8c077b1e934bdba278432bbeb114ab
+cybersource.profileId=51FBA08F-3AFC-464C-AE15-7B90240950EC
+timeout=1000
+ccCaptureService_authRequestID=5482749092596764404003
+cacertPassword=false
+cybersource.returnurl=http://3b494f39.ngrok.io/checkout/order.do
+cybersource.transaction_type=authorization,create_payment_token
+certificateCacheEnabled=true
+useHttpClient=false
+targetAPIVersion=1.151
+allowRetry=true
+keyPassword=wadoz_keramoizol
+ccCaptureService_run=true
+serverURL=https://ics2wstesta.ic3.com/commerce/1.x/transactionProcessor
+enableLog=true
+keysDirectory=/home/wadoz/keys/
+logMaximumSize=10
+cybersource.accessKey=363967f151773da2928dc098cc94d5cc
+merchantReferenceCode=12345678
+cybersource.payment_method=card
+enableCacert=false
+logDirectory=logs
+item_0_unitPrice=150.00
+merchantID=wadoz_keramoizol
+retryInterval=5
+
+2019-01-23 22:24:38 DEBUG CybersourceController:275 - auth reversal
+2019-01-23 22:24:39 DEBUG CybersourceController:65 - REVERSAL REPLY:
+2019-01-23 22:24:39 DEBUG CybersourceController:79 - purchaseTotals_currency=USD
+decision=ACCEPT
+requestID=5482750788876371804012
+merchantReferenceCode=12345678
+ccCaptureReply_reconciliationID=73667884ZR2KZ2GO
+requestToken=Ahj//wSTKThzuZ/Y3L9sESDdm2bN3DhpapMpdplHnqNPu9liqAVGn3ey4H6QO6mIz+GTSTL0Yr17NAwJyZScNtlu/LY0kYAAoSDR
+reasonCode=100
+ccCaptureReply_requestDateTime=2019-01-23T20:24:39Z
+ccCaptureReply_reasonCode=100
+ccCaptureReply_amount=150.00
+
+2019-01-23 22:24:39 DEBUG CybersourceController:121 - Connections to DataBase - MongoDB
+2019-01-23 22:24:39 DEBUG CybersourceController:132 - CANCEL_AUTHORIZATION ->Successfully recorded in DataBase
+2019-01-23 22:24:39 DEBUG CybersourceController:234 - CANCEL AUTHORIZATION is being processed

@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c"
+           uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <html>
@@ -8,7 +10,7 @@
     <script type="text/javascript" src="../../js/jquery-1.7.min.js"></script>
 </head>
 <body>
-<form id="payment_form" action="${requestaddress}" method="post">
+<form id="payment_form" action="cybersource.do" method="post">
 
     <fieldset>
         <legend>Signed Data Fields</legend>
@@ -20,8 +22,7 @@
         <div id="paymentDetailsSection" class="section">
             <span>amount:</span><input
                 type="text" name="amount" size="25"><br/> <span>currency:</span><input
-                type="text" name="currency" size="25"><br/> <span>payment_method:</span><input
-                type="text" name="payment_method"><br/> <span>bill_to_forename:</span><input
+                type="text" name="currency" size="25"><br/> <span>bill_to_forename:</span><input
                 type="text" name="bill_to_forename"><br/> <span>bill_to_surname:</span><input
                 type="text" name="bill_to_surname"><br/> <span>bill_to_email:</span><input
                 type="text" name="bill_to_email"><br/> <span>bill_to_phone:</span><input
@@ -31,9 +32,7 @@
                 type="text" name="bill_to_address_state"><br/> <span>bill_to_address_country:</span><input
                 type="text" name="bill_to_address_country"><br/> <span>bill_to_address_postal_code:</span><input
                 type="text" name="bill_to_address_postal_code"><br/>
-
         </div>
-
     </fieldset>
     <input type="submit" id="submit" name="submit" value="Submit"/>
     <script type="text/javascript" src="../../js/payment_form.js"></script>
